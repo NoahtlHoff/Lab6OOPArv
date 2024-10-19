@@ -32,7 +32,7 @@ namespace Lab6OOPArv
         }
         public override void makeSound()
         {
-            Console.WriteLine("Fågeln kvittrar");
+            Console.WriteLine("*Kvitter*");
         }
     }
 }
