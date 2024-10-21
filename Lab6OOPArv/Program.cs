@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Fish fish1 = new Fish("Nemo", "Svarta", "Orange", 0, true, true);
+            fish1.drink();
+            fish1.makeSound();
+            fish1.Eat();
+
+
+ 
         }
     }
 }
