@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lab6OOPArv
 {
-    class Fish : Animal
+    class Fish : Animal //subclass to animal
     {
         public bool isPredator { get; set; }
-        public Fish(string _name = "Doris", string _eyeColor = "Gul", string _color = "Blå", int _numberOfLegs = 0, bool _isCute = true, bool _isPredator = true)
-             : base(_name, _eyeColor, _color, _numberOfLegs, _isCute)
+        public Fish(string _name = "Doris", string _eyeColor = "Gul", string _color = "Blå", int _numberOfLegs = 0, bool _isCute = true, bool _isPredator = true) //change default values from animal
+             : base(_name, _eyeColor, _color, _numberOfLegs, _isCute) //base variables
         {
             isPredator = _isPredator;
         }
@@ -27,7 +27,7 @@ namespace Lab6OOPArv
             }
 
         }
-
+        //override methods frombaseclass
         public override void drink()
         {
             Console.WriteLine($"{name} dricker.. dricker fiskar verkligen?");
@@ -37,7 +37,7 @@ namespace Lab6OOPArv
         {
             Console.WriteLine("*Blub blub*");
         }
-
+        //new method for this class
         public void Swim()
         {
             Console.WriteLine($"{name} simmar snabbt!");
