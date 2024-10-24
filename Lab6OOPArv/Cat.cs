@@ -9,19 +9,26 @@ namespace Lab6OOPArv
     class Cat : Animal
     {
         public bool isFriendly { get; set; }
-        public Cat(string _name, string _eyeColor, string _color, int _numberOfLegs, bool _isCute, bool _isFriendly) : base(_name, _eyeColor, _color, _numberOfLegs, _isCute)
+        public Cat(string _name = "Gustaf", string _eyeColor = "Gröna", string _color = "Orange", int _numberOfLegs = 4, bool _isCute = true, bool _isFriendly =false)
+            : base(_name, _eyeColor, _color, _numberOfLegs, _isCute)
         {
             isFriendly = _isFriendly;
         }
 
         public override void Eat()
         {
-            Console.WriteLine("Katten mumsar på lite kattmat");
+            if(name == "Gustaf")
+            {
+                Console.WriteLine($"{name} mumsar på lite lasagne");
+            }
+            {
+                Console.WriteLine($"{name} mumsar på lite kattmat");
+            }
         }
 
         public override void drink()
         {
-            Console.WriteLine("Katten dricker vatten");
+            Console.WriteLine($"{name} dricker vatten");
         }
 
         public override void makeSound()
@@ -31,7 +38,7 @@ namespace Lab6OOPArv
 
         public void Play()
         {
-            Console.WriteLine("Katten busar");
+            Console.WriteLine($"{name} busar");
         }
     }
 }

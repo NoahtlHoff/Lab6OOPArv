@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Lab6OOPArv
 {
-    class Bird : Animal
+    class FantasyCreature : Animal
     {
-        public int wings { get; set; }
-        public Bird(string _name = "Pingu", string _eyeColor = "Svart", string _color = "Svart/vit", int _numberOfLegs = 2, bool _isCute = true, int _wings = 2) 
+        public bool hasGlasses { get; set; }
+        public FantasyCreature(string _name = "Shrek", string _eyeColor = "Svart", string _color = "Grön", int _numberOfLegs = 2, bool _isCute = true, bool hasGlasses = false)
              : base(_name, _eyeColor, _color, _numberOfLegs, _isCute)
         {
             wings = _wings;

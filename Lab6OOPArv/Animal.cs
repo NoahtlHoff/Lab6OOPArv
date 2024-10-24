@@ -8,12 +8,13 @@ namespace Lab6OOPArv
 {
     abstract class Animal
     {
-        public string name { get; set; }
+        public string name { get; set; } 
         public string eyeColor { get; set; }
         public string color { get; set; }
         public int numberOfLegs { get; set; }
         public bool isCute { get; set; }
-        public Animal(string _name, string _eyeColor, string _color, int _numberOfLegs, bool _isCute)
+
+        public Animal(string _name = "Kalle", string _eyeColor = "Svart", string _color = "Brun", int _numberOfLegs = 4, bool _isCute = true)
         {
             name = _name;
             eyeColor = _eyeColor;
@@ -21,20 +22,8 @@ namespace Lab6OOPArv
             numberOfLegs = _numberOfLegs;
             isCute = _isCute;
         }
-
-        public virtual void Eat()
-        {
-            Console.WriteLine("");
-        }
-
-        public virtual void drink()
-        {
-            Console.WriteLine("");
-        }
-
-        public virtual void makeSound()
-        {
-            Console.WriteLine("");
-        }
+        public virtual void Eat() { }
+        public virtual void drink() { }
+        public virtual void makeSound() { }
     }
 }

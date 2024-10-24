@@ -8,20 +8,29 @@ namespace Lab6OOPArv
 {
     class Fish : Animal
     {
-        public bool huntsFish { get; set; }
-        public Fish(string _name, string _eyeColor, string _color, int _numberOfLegs, bool _isCute, bool _huntsFish) : base(_name, _eyeColor, _color, _numberOfLegs, _isCute)
+        public bool isPredator { get; set; }
+        public Fish(string _name = "Doris", string _eyeColor = "Gul", string _color = "Blå", int _numberOfLegs = 0, bool _isCute = true, bool _isPredator = true)
+             : base(_name, _eyeColor, _color, _numberOfLegs, _isCute)
         {
-            huntsFish = _huntsFish;
+            isPredator = _isPredator;
         }
 
         public override void Eat()
         {
-            Console.WriteLine("Fisken hittade en mindre fisk att sätta tänderna i");
+            if (isPredator)
+            {
+                Console.WriteLine($"{name} hittade en mindre fisk att sätta tänderna i");
+            }
+            else
+            {
+                Console.WriteLine($"{name} åt lite växter");
+            }
+
         }
 
         public override void drink()
         {
-            Console.WriteLine("Fisken dricker(?).. hmmm...");
+            Console.WriteLine($"{name} dricker.. dricker fiskar verkligen?");
         }
 
         public override void makeSound()
@@ -31,7 +40,7 @@ namespace Lab6OOPArv
 
         public void Swim()
         {
-            Console.WriteLine("Fisken simmar snabbt!");
+            Console.WriteLine($"{name} simmar snabbt!");
         }
     }
 }
